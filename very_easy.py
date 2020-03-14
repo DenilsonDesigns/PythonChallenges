@@ -98,5 +98,42 @@ def clear_fog(txt):
     return word
 
 
+# Find the Perimeter of a Rectangle
+def find_perimeter(height, width):
+    return height * 2 + width * 2
 
 
+# Count the Syllables
+def count_syllables(txt):
+    count = 0
+    for letter in txt.lower():
+        if letter in ['a', 'e', 'i', 'o', 'u']:
+            count += 1
+    return count
+
+
+def count_syllables2(txt):
+    return len([x for x in txt.lower() if x in 'aeiou'])
+
+
+def count_syllables3(txt):
+    return sum(1 for i in txt.lower() if i in 'aeiou')
+
+
+# Get the Sum of All List Elements
+def get_sum_of_elements(lst):
+    return sum(lst)
+
+
+# Is the Last Character an N?
+def is_last_character_n(word):
+    return word[len(word) - 1] in 'nN'
+
+
+def hello_world(num):
+    if not num % 15: return 'Hello World'
+    if not num % 3: return 'Hello'
+    if not num % 5: return 'World'
+
+
+print(hello_world(3))
